@@ -144,9 +144,10 @@ const googleAuthCallback = (req, res) => {
         path: '/'
     };
 
+    const clientUrl = process.env.CLIENT_URL || 'http://localhost:3000';
     res
         .cookie('token', token, options)
-        .redirect('http://localhost:3000'); // Redirect to Frontend
+        .redirect(clientUrl); // Redirect to Frontend
 };
 
 // @desc    GitHub Auth Callback
@@ -165,9 +166,10 @@ const githubAuthCallback = (req, res) => {
         path: '/'
     };
 
+    const clientUrl = process.env.CLIENT_URL || 'http://localhost:3000';
     res
         .cookie('token', token, options)
-        .redirect('http://localhost:3000'); // Redirect to Frontend
+        .redirect(clientUrl); // Redirect to Frontend
 };
 
 module.exports = {

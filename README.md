@@ -2,6 +2,10 @@
 
 VaultHub is a full-featured multi-vendor e-commerce application built with the MERN stack (MongoDB, Express, React/Next.js, Node.js). It supports customers, sellers, and admins with a modern, responsive UI.
 
+## 🚀 Live Demo
+-   **Frontend (Store):** [https://e-commerce-platform-phi-pink.vercel.app](https://e-commerce-platform-phi-pink.vercel.app)
+-   **Backend (API):** [https://e-commerce-platform-1-0q7h.onrender.com](https://e-commerce-platform-1-0q7h.onrender.com)
+
 ## Features
 
 ### 🛍️ Customer
