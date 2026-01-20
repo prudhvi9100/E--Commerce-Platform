@@ -28,7 +28,8 @@ module.exports = function (passport) {
                             user = await User.findOne({ email: email });
                             if (user) {
                                 user.googleId = profile.id;
-                                if (!user.avatar || user.avatar.includes('placeholder')) {
+                                // Overwrite if no avatar, or if it's a placeholder/default
+                                if (!user.avatar || user.avatar.includes('placeholder') || user.avatar.includes('flaticon')) {
                                     user.avatar = profile.photos[0].value;
                                 }
                                 await user.save();
@@ -76,7 +77,7 @@ module.exports = function (passport) {
                             user = await User.findOne({ email: email });
                             if (user) {
                                 user.githubId = profile.id;
-                                if (!user.avatar || user.avatar.includes('placeholder')) {
+                                if (!user.avatar || user.avatar.includes('placeholder') || user.avatar.includes('flaticon')) {
                                     user.avatar = profile.photos[0].value;
                                 }
                                 await user.save();
